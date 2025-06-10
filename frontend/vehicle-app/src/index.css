@@ -2,71 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@layer components {
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    .tool-bar {
+        @apply fixed flex justify-between md:justify-end top-0 left-0 md:left-52 h-16 w-screen md:w-[calc(100%-13rem)] bg-white shadow-lg z-10
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+    .side-bar {
+        @apply hidden h-screen md:fixed md:top-0 md:left-0 md:h-screen md:w-52 md:flex md:flex-col shadow-lg bg-primary z-40
+    }
+    
+    .toolbar-icon {
+        @apply h-16 w-14 md:hidden flex items-center pl-2 cursor-pointer hover:bg-gray-100
+    }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+    .sidebar-icon {
+        @apply relative flex items-center p-2
+        h-16 w-52  mx-auto text-white 
+        hover:bg-blue-300 hover:text-white
+        transition-all cursor-pointer text-sm;
+    }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+    .sidebar-divider {
+        @apply mr-3
+    }
+    .sidebar-logo {
+        @apply relative flex items-center h-24 text-white
+        font-bold
+    }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+    .user-profile{
+        @apply pl-4 h-16 w-40 text-gray-700 font-light
+        relative flex items-center hover:bg-gray-100
+        cursor-pointer
+    }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    .profile-icon {
+        @apply ml-2 text-gray-700
+    }
 }
