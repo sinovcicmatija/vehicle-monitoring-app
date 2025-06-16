@@ -4,10 +4,14 @@ import { useState } from "react";
 
 function App() {
   const [isSidebarOpened, setIsSidebarOpened] = useState(false);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
   return (
     <div className="flex">
-      <ToolBar toggleSidebar={() => setIsSidebarOpened(true)}/>
+      <ToolBar 
+      toggleSidebar={() => setIsSidebarOpened(true)} 
+      toggleProfileMenu={() => setIsProfileMenuOpen((prev) => !prev)}
+      isProfileMenuOpen={isProfileMenuOpen}/>
       <SideBar isOpen={isSidebarOpened}/>
 
       {isSidebarOpened && (

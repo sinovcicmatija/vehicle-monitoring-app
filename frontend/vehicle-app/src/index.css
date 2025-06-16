@@ -37,8 +37,13 @@
         relative flex items-center hover:bg-gray-100
         cursor-pointer
     }
+    .option-profile{
+        @apply pl-4 h-16 w-44 text-gray-700 font-light
+        relative flex items-center hover:bg-gray-100
+        cursor-pointer
+    }
 
     .profile-icon {
-        @apply ml-2 text-gray-700
+        @apply ml-2 mr-4 text-gray-700
     }
 }

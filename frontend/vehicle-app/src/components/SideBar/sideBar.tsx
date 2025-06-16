@@ -8,10 +8,10 @@ const SideBar = ({ isOpen }: {isOpen: boolean }) => {
     return (
         <div className={`side-bar ${isOpen ? "block" : "hidden"} md:block`}>
             <CompanyLogo icon={<FaCarSide size="32" className="m-3"/>} text="CAR SCAN"/>
-            <SideBarIcon icon={<FaHome size="26" />} text="Home"/>
-            <SideBarIcon icon={<RiDashboard2Line size="26" />} text="Live Dashboard"/>
-            <SideBarIcon icon={<GrStatusInfo size="26" />} text="Car Status"/>
-            <SideBarIcon icon={<TbTool size="26" />} text="Service History"/>
+            <SideBarIcon icon={<FaHome size="26" />} text="Početna"/>
+            <SideBarIcon icon={<RiDashboard2Line size="26" />} text="Nadzorna ploča"/>
+            <SideBarIcon icon={<GrStatusInfo size="26" />} text="Status auta"/>
+            <SideBarIcon icon={<TbTool size="26" />} text="Servisna povijest"/>
         </div>
     );
 }
