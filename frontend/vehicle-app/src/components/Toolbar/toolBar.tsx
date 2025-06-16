@@ -46,7 +46,7 @@ const UserProfile = ({ text, icon, onClick }: { text: string, icon: React.ReactE
 
 const UserProfileOptions = ({ icon, text }: { icon: React.ReactElement, text: string }) => (
 
-    <div className="option-profile">
+    <div className="user-profile w-44">
         <div className="profile-icon">
             {icon}
         </div>

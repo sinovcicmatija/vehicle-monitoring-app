@@ -4,43 +4,36 @@
 
 @layer components {
 
+    .content {
+        @apply mt-16 md:ml-52 p-4 w-full;
+    }
+
     .tool-bar {
         @apply fixed flex justify-between md:justify-end top-0 left-0 md:left-52 h-16 w-screen md:w-[calc(100%-13rem)] bg-white shadow-lg z-10
-
     }
 
     .side-bar {
         @apply hidden h-screen md:fixed md:top-0 md:left-0 md:h-screen md:w-52 md:flex md:flex-col shadow-lg bg-primary z-40
     }
-    
+
     .toolbar-icon {
         @apply h-16 w-14 md:hidden flex items-center pl-2 cursor-pointer hover:bg-gray-100
     }
 
     .sidebar-icon {
-        @apply relative flex items-center p-2
-        h-16 w-52  mx-auto text-white 
-        hover:bg-blue-300 hover:text-white
-        transition-all cursor-pointer text-sm;
+        @apply relative flex items-center p-2 h-16 w-52 mx-auto font-thin text-white hover:bg-blue-300 hover:text-white transition-all cursor-pointer text-sm;
     }
 
     .sidebar-divider {
-        @apply mr-3
-    }
-    .sidebar-logo {
-        @apply relative flex items-center h-24 text-white
-        font-bold
+        @apply mr-3 text-blue-200
     }
 
-    .user-profile{
-        @apply pl-4 h-16 w-40 text-gray-700 font-light
-        relative flex items-center hover:bg-gray-100
-        cursor-pointer
+    .sidebar-logo {
+        @apply relative flex items-center h-24 text-white font-bold
     }
-    .option-profile{
-        @apply pl-4 h-16 w-44 text-gray-700 font-light
-        relative flex items-center hover:bg-gray-100
-        cursor-pointer
+
+    .user-profile {
+        @apply pl-4 h-16 w-40 text-gray-700 font-light relative flex items-center hover:bg-gray-100 cursor-pointer
     }
 
     .profile-icon {
