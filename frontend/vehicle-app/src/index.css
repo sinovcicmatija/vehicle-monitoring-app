@@ -8,6 +8,10 @@
         @apply mt-16 md:ml-52 p-4 w-full;
     }
 
+    .card-content {
+        @apply p-5 m-2 rounded-md shadow-lg bg-white text-center
+    }
+
     .tool-bar {
         @apply fixed flex justify-between md:justify-end top-0 left-0 md:left-52 h-16 w-screen md:w-[calc(100%-13rem)] bg-white shadow-lg z-10
     }

@@ -4,6 +4,7 @@ import Home from './components/Home/home'
 import Dashboard from './components/LiveDashboard/liveDashboard';
 import ServiceHistory from './components/ServiceHistory/serviceHistory';
 import CarStatus from './components/CarStatus/carStatus';
+// import Login from './components/Auth/login';
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -12,6 +13,7 @@ function App() {
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
   return (
+    // <Login/>
     <Router>
       <div className="flex">
         <ToolBar
@@ -20,7 +22,7 @@ function App() {
           isProfileMenuOpen={isProfileMenuOpen} />
         <SideBar isOpen={isSidebarOpened} />
 
-        <div className="content">
+        <div className="content bg-gray-50 h-[calc(100vh-4rem)]">
           <Routes>
             
             <Route path="/" element={<Home />} />

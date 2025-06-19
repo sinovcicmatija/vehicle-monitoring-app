@@ -1,6 +1,7 @@
 import { FaUserCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdLogout } from "react-icons/md";
+import { LiaUserEditSolid } from "react-icons/lia";
 
 type ToolBarProps = {
     toggleSidebar: () => void;
@@ -20,7 +21,7 @@ const ToolBar = ({ toggleSidebar, toggleProfileMenu, isProfileMenuOpen }: ToolBa
                 />
                 {isProfileMenuOpen && (
                     <div className="absolute top-full right-0 w-44 bg-white shadow-md z-50">
-                        <UserProfileOptions icon={<FaUserCircle size="22" />} text="Uredi profil" />
+                        <UserProfileOptions icon={<LiaUserEditSolid size="22" />} text="Uredi profil" />
                         <UserProfileOptions icon={<MdLogout size="22" />} text="Odjava" />
                     </div>
                 )}

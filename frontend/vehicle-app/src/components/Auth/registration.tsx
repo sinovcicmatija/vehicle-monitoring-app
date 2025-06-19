@@ -1,4 +1,4 @@
-const Home = ({}) => {
+const Registration = ({}) => {
     return (
         <>
         <h1 className="font-semibold m-3 text-xl">Dobrodošli natrag, user.</h1>
@@ -19,4 +19,4 @@ const Home = ({}) => {
 };
 
 
-export default Home;
+export default Registration;
