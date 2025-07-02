@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using vehicle_api.Interface;
+using vehicle_api.Models.DTO;
+using vehicle_api.Service;
 
 namespace vehicle_api.Controllers
 {
@@ -7,11 +11,33 @@ namespace vehicle_api.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
+        private readonly IUserService _userService;
 
-        //[HttpGet("/loginuser")]
-        //public IActionResult LoginUser([FromQuery] string username)
-        //{
+        public AuthController(IUserService userService)
+        {
+            _userService = userService;
+        }
 
-        //}
+        [HttpPost("/registeruser")]
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterUserDTO user)
+        {
+            var result = await _userService.RegisterUserAsync(user);
+
+            if (result.Success)
+                return Ok(result.Message);
+
+            return BadRequest(result.Message);
+        }
+
+        [HttpPost("/loginuser")]
+        public async Task<IActionResult> LoginUser([FromBody] LoginUserDTO user)
+        {
+            var result = await _userService.LoginUserAsync(user.Username, user.Password);
+
+            if (result.Success)
+                return Ok(result.Message);
+
+            return BadRequest(result.Message);
+        }
     }
 }
