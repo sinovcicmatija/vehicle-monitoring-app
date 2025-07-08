@@ -1,18 +1,8 @@
 [
   {
-    "ContainingType": "vehicle_api.Controllers.HealthCheckController",
-    "Method": "HealthCheck",
-    "RelativePath": "healthcheck",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "vehicle_api.Controllers.AuthController",
     "Method": "LoginUser",
-    "RelativePath": "loginuser",
+    "RelativePath": "api/Auth/loginuser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +18,7 @@
   {
     "ContainingType": "vehicle_api.Controllers.AuthController",
     "Method": "RegisterUser",
-    "RelativePath": "registeruser",
+    "RelativePath": "api/Auth/registeruser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -39,6 +29,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.HealthCheckController",
+    "Method": "HealthCheck",
+    "RelativePath": "api/HealthCheck/healthcheck",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

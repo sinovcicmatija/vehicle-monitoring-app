@@ -37,7 +37,7 @@
     }
 
     .user-profile {
-        @apply pl-4 h-16 w-40 text-gray-700 font-light relative flex items-center hover:bg-gray-100 cursor-pointer
+        @apply pl-4 h-16 w-44 text-gray-700 font-light relative flex items-center hover:bg-gray-100 cursor-pointer
     }
 
     .profile-icon {
