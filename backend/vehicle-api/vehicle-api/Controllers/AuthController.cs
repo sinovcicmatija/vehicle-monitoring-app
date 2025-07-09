@@ -18,26 +18,26 @@ namespace vehicle_api.Controllers
             _userService = userService;
         }
 
-        [HttpPost("registeruser")]
+        [HttpPost("/registeruser")]
         public async Task<IActionResult> RegisterUser([FromBody] RegisterUserDTO user)
         {
             var result = await _userService.RegisterUserAsync(user);
 
             if (result.Success)
-                return Ok(result);
+                return Ok(result.Message);
 
-            return BadRequest(result);
+            return BadRequest(result.Message);
         }
 
-        [HttpPost("loginuser")]
+        [HttpPost("/loginuser")]
         public async Task<IActionResult> LoginUser([FromBody] LoginUserDTO user)
         {
             var result = await _userService.LoginUserAsync(user.Username, user.Password);
 
             if (result.Success)
-                return Ok(result);
+                return Ok(result.Message);
 
-            return BadRequest(result);
+            return BadRequest(result.Message);
         }
     }
 }

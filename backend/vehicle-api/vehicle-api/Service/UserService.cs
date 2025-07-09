@@ -66,7 +66,7 @@ namespace vehicle_api.Service
 
         public async Task<AuthResult> LoginUserAsync(string username, string password)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+           var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
             if (user == null)
                 return new AuthResult
                 {
@@ -77,30 +77,9 @@ namespace vehicle_api.Service
             var hasher = new PasswordHasher<User>();
             var result = hasher.VerifyHashedPassword(user, user.PasswordHash!, password);
 
-            if (result == PasswordVerificationResult.Success)
-            {
-                return new AuthResult
-                {
-                    Success = true,
-                    Message = "Uspješna prijava.",
-                    User = new LoggedInUserDTO
-                    {
-                        Username = user.Username!,
-                        FirstName = user.FirstName!,
-                        LastName = user.LastName!
-                    }
-                };
-            }
-            else
-            {
-                return new AuthResult
-                {
-                    Success = false,
-                    Message = "Lozinka nije ispravna."
-                };
-            }
-  
-               
+            return result == PasswordVerificationResult.Success
+                ? new AuthResult { Success = true, Message = "Uspješna prijava." }
+                : new AuthResult { Success = false, Message = "Lozinka nije ispravna." };
         }
     }
 }
