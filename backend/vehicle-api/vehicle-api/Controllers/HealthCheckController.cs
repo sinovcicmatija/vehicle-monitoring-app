@@ -9,7 +9,7 @@ namespace vehicle_api.Controllers
     public class HealthCheckController : ControllerBase
     {
 
-        [HttpGet("/healthcheck")]
+        [HttpGet("healthcheck")]
         public IActionResult HealthCheck([FromServices] VehicleDbContext db)
         {
             bool canConnect = db.Database.CanConnect();

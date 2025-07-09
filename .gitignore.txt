@@ -1,24 +1,66 @@
-# PlatformIO
-.pio
+# === PlatformIO ===
+.pio/
 .vscode/
 *.elf
 *.bin
 *.hex
 
-# Node (React)
+# === Node.js / React (Frontend) ===
 node_modules/
 dist/
 build/
 .env
+.env.*       # pokriva npr. .env.local, .env.development
 
-# ASP.NET Core
+# Log fajlovi
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# === ASP.NET Core ===
 bin/
 obj/
 *.user
 *.suo
 *.cache
+*.dbmdl
+*.pdb
+*.mdb
+*.dll
 
-# General
+# VS-specific
+.vs/
+*.vsidx
+*.csproj.user
+*.csproj.FileListAbsolute.txt
+*.csproj.nuget.g.targets
+*.csproj.nuget.g.props
+
+# Rider/JetBrains
+.idea/
+*.sln.iml
+
+# === OS-specific ===
+# macOS
 .DS_Store
+
+# Windows
 Thumbs.db
-*.log
+ehthumbs.db
+Desktop.ini
+
+# === Miscellaneous ===
+*.tgz
+*.gz
+*.zip
+*.tar
+*.tmp
+*.bak
+
+# === Test coverage / build output ===
+coverage/
+test-output/
+output/
+tmp/

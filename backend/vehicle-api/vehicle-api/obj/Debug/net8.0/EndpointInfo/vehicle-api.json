@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/registeruser": {
+    "/api/Auth/registeruser": {
       "post": {
         "tags": [
           "Auth"
@@ -36,7 +36,7 @@
         }
       }
     },
-    "/loginuser": {
+    "/api/Auth/loginuser": {
       "post": {
         "tags": [
           "Auth"
@@ -67,7 +67,7 @@
         }
       }
     },
-    "/healthcheck": {
+    "/api/HealthCheck/healthcheck": {
       "get": {
         "tags": [
           "HealthCheck"
