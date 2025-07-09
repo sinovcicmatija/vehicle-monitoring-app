@@ -17,6 +17,7 @@ const Login = ({ setUser }: LoginProps) => {
     const [notif, setNotif] = useState(location.state?.message || null);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         if (notif) {
@@ -39,7 +40,9 @@ const Login = ({ setUser }: LoginProps) => {
             password
         };
 
+        setIsLoading(true);
         const response: AuthResult = await loginUser(loginDTO);
+        setIsLoading(false);
         if (response.success && response.user) {
             sessionStorage.setItem("user", JSON.stringify(response.user));
             setUser(response.user);
@@ -67,7 +70,7 @@ const Login = ({ setUser }: LoginProps) => {
                     </label>
                 </form>
                 <p className="text-sm cursor-pointer hover:underline mb-10 mt-4" onClick={navigateToRegistration}>Nemate račun? Registrirajte se.</p>
-                <button className="bg-primary hover:bg-blue-700 px-6 py-2 rounded-lg text-white shadow-lg" onClick={handleLogin}>Prijava</button>
+                <button className="bg-primary hover:bg-blue-700 px-6 py-2 rounded-lg text-white shadow-lg" onClick={handleLogin}>{isLoading ? "Prijava..." : "Prijava"}</button>
             </div>
         </div>
     )
