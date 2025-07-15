@@ -17,11 +17,11 @@ namespace vehicle_api.Controllers
         }
 
         [HttpPost("decodevin")]
-        public async Task<IActionResult> DecodeVin([FromQuery] string vin)
+        public async Task<IActionResult> DecodeVin()
         {
-            var car = await _carService.DecodeAndSaveCarAsync(vin);
+            var car = await _carService.DecodeAndSaveCarAsync();
 
             return Ok(car);
-        }
+        }     
     }
 }

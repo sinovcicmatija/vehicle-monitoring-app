@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "C:\\zavrsni-rad\\backend\\vehicle-api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\external\\mqttcommunication\\mqtthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\external\\mqttcommunication\\mqtthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\external\\mqttcommunication\\mqttstartupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\external\\mqttcommunication\\mqttstartupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\service\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\service\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\service\\coreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\service\\coreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\controllers\\healthcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\controllers\\healthcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\external\\vindecoder\\vindecoderapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,18 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\controllers\\vehiclecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\interface\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\interface\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -67,10 +83,6 @@
       "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\models\\ownershiphistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\controllers\\healthcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\controllers\\healthcheckcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|c:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{EAF310A9-ACF4-493C-A993-E6E95E0BBC17}|vehicle-api\\vehicle-api.csproj|solutionrelative:vehicle-api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -90,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 37,
+          "SelectedChildIndex": 33,
           "Children": [
             {
               "$type": "Bookmark",
@@ -226,72 +238,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\Car.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\Models\\Car.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\Car.cs",
-              "RelativeToolTip": "vehicle-api\\Models\\Car.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAA1wDEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MQTTHandler.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\MQTTCommunication\\MQTTHandler.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\External\\MQTTCommunication\\MQTTHandler.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\MQTTCommunication\\MQTTHandler.cs*",
+              "RelativeToolTip": "vehicle-api\\External\\MQTTCommunication\\MQTTHandler.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA8wBMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:46:29.312Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "VinResponseMapper.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinResponseMapper.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\External\\VinDecoder\\VinResponseMapper.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinResponseMapper.cs",
-              "RelativeToolTip": "vehicle-api\\External\\VinDecoder\\VinResponseMapper.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAQwFEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:18:38.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "VinApiField.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinApiField.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\External\\VinDecoder\\VinApiField.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinApiField.cs",
-              "RelativeToolTip": "vehicle-api\\External\\VinDecoder\\VinApiField.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T17:25:46.388Z",
+              "WhenOpened": "2025-07-14T17:15:05.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VinDecoderApiService.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinDecoderApiService.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\External\\VinDecoder\\VinDecoderApiService.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinDecoderApiService.cs",
-              "RelativeToolTip": "vehicle-api\\External\\VinDecoder\\VinDecoderApiService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABOAAAAAAAAAA==",
+              "Title": "MQTTStartupService.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\MQTTCommunication\\MQTTStartupService.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\External\\MQTTCommunication\\MQTTStartupService.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\MQTTCommunication\\MQTTStartupService.cs",
+              "RelativeToolTip": "vehicle-api\\External\\MQTTCommunication\\MQTTStartupService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T17:23:42.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CarService.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\CarService.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\Service\\CarService.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\CarService.cs*",
-              "RelativeToolTip": "vehicle-api\\Service\\CarService.cs*",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAywB0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T13:21:32.401Z",
+              "WhenOpened": "2025-07-14T12:37:18.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Program.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\Program.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Program.cs",
+              "RelativeToolTip": "vehicle-api\\Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAIwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T10:25:32.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CarService.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\CarService.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\Service\\CarService.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\CarService.cs",
+              "RelativeToolTip": "vehicle-api\\Service\\CarService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-13T13:21:32.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Interface\\IUserService.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Interface\\IUserService.cs",
@@ -299,77 +297,59 @@
               "RelativeToolTip": "vehicle-api\\Interface\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T13:26:56.387Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T13:26:56.387Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "VehicleController.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Controllers\\VehicleController.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Controllers\\VehicleController.cs",
               "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Controllers\\VehicleController.cs",
               "RelativeToolTip": "vehicle-api\\Controllers\\VehicleController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T13:00:26.788Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T13:00:26.788Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ICarService.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Interface\\ICarService.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\Interface\\ICarService.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Interface\\ICarService.cs",
-              "RelativeToolTip": "vehicle-api\\Interface\\ICarService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "VinResponseMapper.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinResponseMapper.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\External\\VinDecoder\\VinResponseMapper.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinResponseMapper.cs",
+              "RelativeToolTip": "vehicle-api\\External\\VinDecoder\\VinResponseMapper.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAQwFEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T13:26:44.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T11:18:38.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "vehicle-api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAuwBUAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\Models\\Car.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\Car.cs",
+              "RelativeToolTip": "vehicle-api\\Models\\Car.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T23:07:58.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T11:46:29.312Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\UserService.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\Service\\UserService.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\UserService.cs",
-              "RelativeToolTip": "vehicle-api\\Service\\UserService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwC0AAAApAAAAAAAAAA==",
+              "Title": "CoreService.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\CoreService.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\Service\\CoreService.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\CoreService.cs",
+              "RelativeToolTip": "vehicle-api\\Service\\CoreService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-11T17:25:08.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T18:38:38.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthResult.cs",
-              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Utils\\AuthResult.cs",
-              "RelativeDocumentMoniker": "vehicle-api\\Utils\\AuthResult.cs",
-              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Utils\\AuthResult.cs",
-              "RelativeToolTip": "vehicle-api\\Utils\\AuthResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T17:52:49.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 7,
               "Title": "HealthCheckController.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Controllers\\HealthCheckController.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Controllers\\HealthCheckController.cs",
@@ -377,12 +357,71 @@
               "RelativeToolTip": "vehicle-api\\Controllers\\HealthCheckController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T12:11:21.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T12:11:21.531Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\Service\\UserService.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Service\\UserService.cs",
+              "RelativeToolTip": "vehicle-api\\Service\\UserService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwC0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T17:25:08.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VinDecoderApiService.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinDecoderApiService.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\External\\VinDecoder\\VinDecoderApiService.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinDecoderApiService.cs",
+              "RelativeToolTip": "vehicle-api\\External\\VinDecoder\\VinDecoderApiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T17:23:42.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VinApiField.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinApiField.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\External\\VinDecoder\\VinApiField.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\External\\VinDecoder\\VinApiField.cs",
+              "RelativeToolTip": "vehicle-api\\External\\VinDecoder\\VinApiField.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-11T17:25:46.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "vehicle-api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAuwBUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T23:07:58.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthResult.cs",
+              "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Utils\\AuthResult.cs",
+              "RelativeDocumentMoniker": "vehicle-api\\Utils\\AuthResult.cs",
+              "ToolTip": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Utils\\AuthResult.cs",
+              "RelativeToolTip": "vehicle-api\\Utils\\AuthResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T17:52:49.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "vehicle-api\\Properties\\launchSettings.json",
@@ -390,12 +429,11 @@
               "RelativeToolTip": "vehicle-api\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-07T11:56:07.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T11:56:07.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\User.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Models\\User.cs",
@@ -403,12 +441,11 @@
               "RelativeToolTip": "vehicle-api\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T12:01:06.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-05T12:01:06.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "RegisterUserDTO.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\DTO\\RegisterUserDTO.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Models\\DTO\\RegisterUserDTO.cs",
@@ -416,12 +453,11 @@
               "RelativeToolTip": "vehicle-api\\Models\\DTO\\RegisterUserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T22:54:36.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T22:54:36.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "LoginUserDTO.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\DTO\\LoginUserDTO.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Models\\DTO\\LoginUserDTO.cs",
@@ -429,12 +465,11 @@
               "RelativeToolTip": "vehicle-api\\Models\\DTO\\LoginUserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T14:30:08.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T14:30:08.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "OwnershipHistory.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\OwnershipHistory.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Models\\OwnershipHistory.cs",
@@ -442,12 +477,11 @@
               "RelativeToolTip": "vehicle-api\\Models\\OwnershipHistory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T22:54:29.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T22:54:29.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "LoggedInUserDTO.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\DTO\\LoggedInUserDTO.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Models\\DTO\\LoggedInUserDTO.cs",
@@ -455,12 +489,11 @@
               "RelativeToolTip": "vehicle-api\\Models\\DTO\\LoggedInUserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-05T12:02:42.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-05T12:02:42.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "ServiceHistory.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\ServiceHistory.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Models\\ServiceHistory.cs",
@@ -468,12 +501,11 @@
               "RelativeToolTip": "vehicle-api\\Models\\ServiceHistory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T22:54:28.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T22:54:28.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ServiceType.cs",
               "DocumentMoniker": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\Models\\ServiceType.cs",
               "RelativeDocumentMoniker": "vehicle-api\\Models\\ServiceType.cs",
@@ -481,8 +513,7 @@
               "RelativeToolTip": "vehicle-api\\Models\\ServiceType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T22:54:28.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-27T22:54:28.315Z"
             }
           ]
         },

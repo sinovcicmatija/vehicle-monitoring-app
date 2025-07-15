@@ -4,6 +4,6 @@ namespace vehicle_api.Interface
 {
     public interface ICarService
     {
-        Task<Car> DecodeAndSaveCarAsync(string vin);
+        Task<Car> DecodeAndSaveCarAsync();
     }
 }

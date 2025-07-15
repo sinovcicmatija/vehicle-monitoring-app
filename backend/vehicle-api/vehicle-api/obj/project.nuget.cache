@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KddKR4qKa6M=",
+  "dgSpecHash": "TWIcK8zgZe4=",
   "success": true,
   "projectFilePath": "C:\\zavrsni-rad\\backend\\vehicle-api\\vehicle-api\\vehicle-api.csproj",
   "expectedPackageFiles": [
@@ -78,6 +78,9 @@
     "C:\\Users\\matek\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\matek\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\matek\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\matek\\.nuget\\packages\\mqttnet\\5.0.1.1416\\mqttnet.5.0.1.1416.nupkg.sha512",
+    "C:\\Users\\matek\\.nuget\\packages\\mqttnet.aspnetcore\\5.0.1.1416\\mqttnet.aspnetcore.5.0.1.1416.nupkg.sha512",
+    "C:\\Users\\matek\\.nuget\\packages\\mqttnet.server\\5.0.1.1416\\mqttnet.server.5.0.1.1416.nupkg.sha512",
     "C:\\Users\\matek\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\matek\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\matek\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",

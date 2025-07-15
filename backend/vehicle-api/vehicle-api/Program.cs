@@ -4,6 +4,8 @@ using vehicle_api.Service;
 using vehicle_api.Interface;
 using vehicle_api.External.VinDecoder;
 using DotNetEnv;
+using vehicle_api.External.MQTTCommunication;
+using MQTTnet.AspNetCore;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -36,6 +38,8 @@ builder.Services.AddHttpClient<VinDecoderApiService>(client =>
 
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddSingleton<MQTTHandler>();
+builder.Services.AddHostedService<MQTTStartupService>();
 
 builder.Services.AddDbContext<VehicleDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

@@ -1493,6 +1493,55 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "MQTTnet/5.0.1.1416": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/MQTTnet.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MQTTnet.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "MQTTnet.AspNetCore/5.0.1.1416": {
+        "type": "package",
+        "dependencies": {
+          "MQTTnet": "5.0.1.1416",
+          "MQTTnet.Server": "5.0.1.1416"
+        },
+        "compile": {
+          "lib/net8.0/MQTTnet.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MQTTnet.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "MQTTnet.Server/5.0.1.1416": {
+        "type": "package",
+        "dependencies": {
+          "MQTTnet": "5.0.1.1416"
+        },
+        "compile": {
+          "lib/net8.0/MQTTnet.Server.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/MQTTnet.Server.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -6035,6 +6084,48 @@
         "readme.md"
       ]
     },
+    "MQTTnet/5.0.1.1416": {
+      "sha512": "ONYieEMaHiIei5dAtHXywnfJGhmrd5Av5sNJSQERp6AtZdPk3xxjCR6Cv0C5RUr/XbLeHO4/HQ0Rc2bQ5NF5Mw==",
+      "type": "package",
+      "path": "mqttnet/5.0.1.1416",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/MQTTnet.dll",
+        "lib/net8.0/MQTTnet.xml",
+        "mqttnet.5.0.1.1416.nupkg.sha512",
+        "mqttnet.nuspec",
+        "nuget.png"
+      ]
+    },
+    "MQTTnet.AspNetCore/5.0.1.1416": {
+      "sha512": "ku7XJqk9XqumqCoNVXIpW6TMhNj6FjJSWy4x8kqMSSK31G1YOjsnkKkNI+dhZMC/FH46UxwTZv2fy3IpBct6vw==",
+      "type": "package",
+      "path": "mqttnet.aspnetcore/5.0.1.1416",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/MQTTnet.AspNetCore.dll",
+        "lib/net8.0/MQTTnet.AspNetCore.xml",
+        "mqttnet.aspnetcore.5.0.1.1416.nupkg.sha512",
+        "mqttnet.aspnetcore.nuspec",
+        "nuget.png"
+      ]
+    },
+    "MQTTnet.Server/5.0.1.1416": {
+      "sha512": "S17xbTitOKXEp+KMpIJgsLCRYVOqH+b8IF21+fqERI0zdiF5AqOfgXhI2Fmr4Ev8ftKoAUDfEEn8ckwo478i5Q==",
+      "type": "package",
+      "path": "mqttnet.server/5.0.1.1416",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/MQTTnet.Server.dll",
+        "lib/net8.0/MQTTnet.Server.xml",
+        "mqttnet.server.5.0.1.1416.nupkg.sha512",
+        "mqttnet.server.nuspec",
+        "nuget.png"
+      ]
+    },
     "NETStandard.Library/1.6.1": {
       "sha512": "WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "type": "package",
@@ -10470,6 +10561,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "DotNetEnv >= 3.1.1",
+      "MQTTnet.AspNetCore >= 5.0.1.1416",
       "Microsoft.AspNetCore.Identity >= 2.3.1",
       "Microsoft.EntityFrameworkCore >= 9.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.6",
@@ -10530,6 +10622,10 @@
           "DotNetEnv": {
             "target": "Package",
             "version": "[3.1.1, )"
+          },
+          "MQTTnet.AspNetCore": {
+            "target": "Package",
+            "version": "[5.0.1.1416, )"
           },
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",
