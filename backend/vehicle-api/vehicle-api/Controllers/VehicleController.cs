@@ -16,7 +16,7 @@ namespace vehicle_api.Controllers
             _carService = carService;
         }
 
-        [HttpPost("decodevin")]
+        [HttpGet("decodevin")]
         public async Task<IActionResult> DecodeVin()
         {
             var car = await _carService.DecodeAndSaveCarAsync();

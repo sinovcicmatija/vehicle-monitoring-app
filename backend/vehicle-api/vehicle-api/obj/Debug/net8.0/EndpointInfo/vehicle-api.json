@@ -80,7 +80,7 @@
       }
     },
     "/api/Vehicle/decodevin": {
-      "post": {
+      "get": {
         "tags": [
           "Vehicle"
         ],

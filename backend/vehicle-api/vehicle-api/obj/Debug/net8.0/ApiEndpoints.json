@@ -45,7 +45,7 @@
     "ContainingType": "vehicle_api.Controllers.VehicleController",
     "Method": "DecodeVin",
     "RelativePath": "api/Vehicle/decodevin",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],

@@ -1,0 +1,20 @@
+export interface CarDataDTO {
+    vin?: string | null;
+    brand?: string | null;
+    model?: string | null;
+    makeYear?: number | null;
+    engineType?: string | null;
+    body?: string | null;
+    lengthMm?: number | null;
+    widthMm?: number | null;
+    heightMm?: number | null;
+    weightEmptyKg?: number | null;
+    maxWeightKg?: number | null;
+    maxRoofLoadKg?: number | null;
+    frontBrakes?: string | null;
+    rearBrakes?: string | null;
+    wheelSize?: string | null;
+    emissionStandard?: string | null;
+    maxSpeedKmh?: number | null;
+    absState?: boolean | null;
+}
