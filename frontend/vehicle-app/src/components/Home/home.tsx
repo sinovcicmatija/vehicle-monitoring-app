@@ -42,23 +42,24 @@ const Home = ({ loggedInUser }: { loggedInUser: LoggedInUserDTO }) => {
 
                 {data && (
                     <>
-                        <div className="flex gap-6 items-start">
-                            {carImage && (
-                                <img
-                                    src={carImage}
-                                    alt={`${data.brand} ${data.model}`}
-                                    className="w-[300px] h-auto rounded-lg shadow-md"
-                                />
-                            )}
+                            
                             <div className="flex-1">
-                                <button className="bg-primary hover:bg-blue-700 px-6 py-2 rounded-lg text-white shadow-lg mb-4" onClick={handleDisconnect}>
+                                <button className="bg-primary hover:bg-blue-700 px-6 py-2 rounded-lg text-white shadow-lg mb-8 " onClick={handleDisconnect}>
                                     Prekini vezu
                                 </button>
 
-                                <div className="p-6 shadow-lg rounded-lg space-y-6 bg-white">
+                                <div className="grid gird-cols-1 md:grid-cols-2 gap-8 md:max-w-[1200px] ">
+
+                                    {carImage && (
+                                <img
+                                    src={carImage}
+                                    alt={`${data.brand} ${data.model}`}
+                                    className="w-[300px] h-auto md:w-[400px] rounded-lg shadow-md mb-4"
+                                />
+                            )}
 
                                     {/* OSNOVNE INFORMACIJE */}
-                                    <section className="border-b pb-4">
+                                    <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
                                         <h2 className="font-bold text-lg mb-2">Osnovne informacije</h2>
                                         <div className="grid grid-cols-2 gap-2">
                                             <div>Marka i model: {data.brand} {data.model}</div>
@@ -71,7 +72,7 @@ const Home = ({ loggedInUser }: { loggedInUser: LoggedInUserDTO }) => {
                                     </section>
 
                                     {/* DIMENZIJE I KAROSERIJA */}
-                                    <section className="border-b pb-4">
+                                    <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
                                         <h2 className="font-bold text-lg mb-2">Dimenzije i karoserija</h2>
                                         <div className="grid grid-cols-2 gap-2">
                                             <div>Oblik karoserije: {data.body}</div>
@@ -82,7 +83,7 @@ const Home = ({ loggedInUser }: { loggedInUser: LoggedInUserDTO }) => {
                                     </section>
 
                                     {/* TEŽINE */}
-                                    <section className="border-b pb-4">
+                                    <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
                                         <h2 className="font-bold text-lg mb-2">Masa i nosivost</h2>
                                         <div className="grid grid-cols-2 gap-2">
                                             <div>Težina praznog vozila: {data.weightEmptyKg} kg</div>
@@ -92,7 +93,7 @@ const Home = ({ loggedInUser }: { loggedInUser: LoggedInUserDTO }) => {
                                     </section>
 
                                     {/* KOČNICE I OVJES */}
-                                    <section>
+                                    <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
                                         <h2 className="font-bold text-lg mb-2">Kočnice i ovjes</h2>
                                         <div className="grid grid-cols-2 gap-2">
                                             <div>Prednje kočnice: {data.frontBrakes}</div>
@@ -104,7 +105,6 @@ const Home = ({ loggedInUser }: { loggedInUser: LoggedInUserDTO }) => {
 
                                 </div>
                             </div>
-                        </div>
                     </>
                 )}
 

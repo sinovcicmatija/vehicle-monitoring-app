@@ -31,7 +31,7 @@ void setup() {
   Serial.begin(115200);
   setupWifi();
   setupMqtt();
-  //setupELM();
+  setupELM();
 }
 
 void loop() {
@@ -40,18 +40,18 @@ void loop() {
   }
 
 
-//   if (!elmConnected && millis() - lastElmAttempt > elmRetryInterval)
-//   {
-//     Serial.println("Trying to connect to ELM327");
-//     lastElmAttempt = millis();
+  if (!elmConnected && millis() - lastElmAttempt > elmRetryInterval)
+  {
+    Serial.println("Trying to connect to ELM327");
+    lastElmAttempt = millis();
 
-//     if (ELM_PORT.connect("OBDII")) {
-//       Serial.println("Connected to ELM327");
-//       elmConnected = true;
-//   } else {
-//     Serial.println("Unsuccesful connection, trying again in 5 seconds....");
-//   }
-// }
+    if (ELM_PORT.connect("OBDII")) {
+      Serial.println("Connected to ELM327");
+      elmConnected = true;
+  } else {
+    Serial.println("Unsuccesful connection, trying again in 5 seconds....");
+  }
+}
 
 client.loop();
 }
@@ -105,8 +105,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.println(topic);
 
   if (String(topic) == "esp32/request/vin") {
-    //String vin = getVin();
-    String vin = "W0V0XEP68K4272025";
+    String vin = getVin();
     client.publish("esp32/response/vin", vin.c_str());
   }
 }
@@ -130,7 +129,6 @@ String getVin()
   }
   Serial.println(fullResponse);
 
-  // Za sad samo vrati sirovi odgovor (parsiranje možeš dodati kasnije)
   return parseVinFromResponse(fullResponse);
 }
 
