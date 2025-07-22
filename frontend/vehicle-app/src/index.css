@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+    body {
+        @apply bg-gray-50;
+    }
 
     .content {
         @apply mt-16 md:ml-52 p-4 w-full;

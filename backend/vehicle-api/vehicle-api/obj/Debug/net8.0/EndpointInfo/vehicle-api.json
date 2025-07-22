@@ -78,6 +78,18 @@
           }
         }
       }
+    },
+    "/api/Vehicle/decodevin": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

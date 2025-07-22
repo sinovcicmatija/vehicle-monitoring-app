@@ -45,7 +45,7 @@ function App() {
           loggedInUser={user} />
         <SideBar isOpen={isSidebarOpened} />
 
-        <div className="content bg-gray-50 h-[calc(100vh-4rem)]">
+        <div className="content h-[calc(100vh-4rem)]">
           <Routes>
             <Route path="/" element={<Home loggedInUser={user}/>} />
             <Route path="/dashboard" element={<Dashboard />} />

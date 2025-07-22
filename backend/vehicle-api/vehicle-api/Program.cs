@@ -2,10 +2,16 @@ using Microsoft.EntityFrameworkCore;
 using vehicle_api.Data;
 using vehicle_api.Service;
 using vehicle_api.Interface;
+using vehicle_api.External.VinDecoder;
+using DotNetEnv;
+using vehicle_api.External.MQTTCommunication;
+using MQTTnet.AspNetCore;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
+
+DotNetEnv.Env.Load(@"C:\Users\matek\Desktop\.env");
 
 builder.Services.AddCors(options =>
 {
@@ -25,8 +31,15 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHttpClient<VinDecoderApiService>(client =>
+{
+    client.BaseAddress = new Uri("https://api.vindecoder.eu/3.2/");
+});
 
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddSingleton<MQTTHandler>();
+builder.Services.AddHostedService<MQTTStartupService>();
 
 builder.Services.AddDbContext<VehicleDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
