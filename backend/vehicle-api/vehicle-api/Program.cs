@@ -6,6 +6,7 @@ using vehicle_api.External.VinDecoder;
 using DotNetEnv;
 using vehicle_api.External.MQTTCommunication;
 using MQTTnet.AspNetCore;
+using vehicle_api.Utils;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
@@ -36,6 +37,8 @@ builder.Services.AddHttpClient<VinDecoderApiService>(client =>
     client.BaseAddress = new Uri("https://api.vindecoder.eu/3.2/");
 });
 
+builder.Services.AddSignalR();
+
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddSingleton<MQTTHandler>();
@@ -55,6 +58,9 @@ using (var scope = app.Services.CreateScope())
         Console.WriteLine("Baza nije dostupna u trenutku starta.");
     }
 }
+
+app.MapHub<CarDataHub>("/hubs/cardata");
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

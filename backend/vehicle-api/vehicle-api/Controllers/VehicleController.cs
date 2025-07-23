@@ -22,6 +22,20 @@ namespace vehicle_api.Controllers
             var car = await _carService.DecodeAndSaveCarAsync();
 
             return Ok(car);
-        }     
+        }
+
+        [HttpGet("startLiveStream")]
+        public async Task<IActionResult> StartLiveStream()
+        {
+            await _carService.StartStreamAsync();
+            return Ok();
+        }
+
+        [HttpGet("stopLiveStream")]
+        public async Task<IActionResult> StopLiveStream()
+        {
+            await _carService.StopStreamAsync();
+            return Ok();
+        }
     }
 }

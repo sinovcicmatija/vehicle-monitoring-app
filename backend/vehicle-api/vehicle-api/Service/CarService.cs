@@ -4,6 +4,7 @@ using vehicle_api.External.MQTTCommunication;
 using vehicle_api.External.VinDecoder;
 using vehicle_api.Interface;
 using vehicle_api.Models;
+using vehicle_api.Models.DTO;
 
 namespace vehicle_api.Service
 {
@@ -35,6 +36,16 @@ namespace vehicle_api.Service
             await _dbContext.SaveChangesAsync();
 
             return car;
+        }
+
+        public async Task StartStreamAsync()
+        {
+            await _mqttHandler.RequestLiveDataAsync();
+        }
+
+        public async Task StopStreamAsync()
+        {
+            await _mqttHandler.StopLiveDataAsync();
         }
     }
 }
