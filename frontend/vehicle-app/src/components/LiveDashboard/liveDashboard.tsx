@@ -92,8 +92,8 @@ const Dashboard = ({ }) => {
                 </div>
 
                 <div className="card-content">
-                    <p className="text-yellow-600">NAPON AKOMULATORA</p>
-                    <p className="text-5xl font-thin">{liveData?.batteryVoltage} V</p>
+                    <p className="text-yellow-600">TEMPERATURA USISA ZRAKA</p>
+                    <p className="text-5xl font-thin">{liveData?.intakeTemperature} V</p>
                 </div>
             </div>
         </>
