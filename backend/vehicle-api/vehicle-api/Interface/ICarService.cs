@@ -8,6 +8,7 @@ namespace vehicle_api.Interface
         Task<Car> DecodeAndSaveCarAsync();
         Task StartStreamAsync();
         Task StopStreamAsync();
+        Task<List<string>> GetDtc();
 
     }
 }

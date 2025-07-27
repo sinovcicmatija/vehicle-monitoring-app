@@ -32,7 +32,7 @@ unsigned long lastElmAttempt = 0;
 const unsigned long elmRetryInterval = 5000;
 
 unsigned long lastLiveDataSent = 0;
-const unsigned long liveDataInterval = 500; 
+const unsigned long liveDataInterval = 900; 
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -120,6 +120,7 @@ void reconnect()
       client.subscribe("esp32/request/vin");
       client.subscribe("esp32/request/startLiveDataStream");
       client.subscribe("esp32/request/stopLiveDataStream");
+      client.subscribe("esp32/request/dtc");
     }
     else
     {
@@ -149,8 +150,37 @@ void callback(char *topic, byte *payload, unsigned int length)
   {
     streamActive = false;
   }
+  if (String(topic) == "esp32/request/dtc")
+  {
+    std::vector<String> codes = GetErrorCodes();
+    publishErrorCodes(codes);
+  }
 }
 
+std::vector<String> GetErrorCodes()
+{
+  ELM_PORT.println("03");
+  delay(500);
+  String response;
+  unsigned long timeout = millis() + 2000;
+  while (millis() < timeout)
+  {
+    while (ELM_PORT.available())
+    {
+      String line = ELM_PORT.readStringUntil('\r');
+      line.trim();
+      if (line.length() > 0)
+      {
+        Serial.println("Primljeno: " + line);
+        response += line + "\n";
+      }
+    }
+  }
+  Serial.println(response);
+
+  return Elm327Parser::parseDtcCodes(response);
+}
+ 
 String getVin()
 {
   ELM_PORT.println("09 02");
@@ -188,12 +218,6 @@ CarDataLiveDTO getLiveData()
   return data;
 }
 
-void getErrorCodes()
-{
-  String errorCode = getElmValue("03");
-  Serial.println("Error codes: " + errorCode);
-}
-
 String getElmValue(String pid)
 {
   ELM_PORT.println(pid);
@@ -227,6 +251,21 @@ void publishLiveData(const CarDataLiveDTO& data) {
     serializeJson(doc, json);
     client.publish("esp32/response/liveData", json.c_str());
     Serial.println("Live data sent at: " + String(millis()));
+}
+
+void publishErrorCodes(const std::vector<String>& codes) {
+    StaticJsonDocument<256> doc;
+    JsonArray arr = doc.to<JsonArray>();
+
+    for (const String& code : codes) {
+        arr.add(code);
+    }
+
+    String json;
+    serializeJson(doc, json);
+    client.publish("esp32/response/dtc", json.c_str());
+
+    Serial.println("DTC JSON sent: " + json);
 }
 
 String parseVinFromResponse(const String &rawResponse)

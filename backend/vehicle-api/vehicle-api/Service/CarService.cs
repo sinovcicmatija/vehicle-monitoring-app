@@ -47,5 +47,11 @@ namespace vehicle_api.Service
         {
             await _mqttHandler.StopLiveDataAsync();
         }
+
+        public async Task<List<string>> GetDtc()
+        {
+            List<string> dtc = await _mqttHandler.RequestDtcAsync();
+            return dtc;
+        }
     }
 }

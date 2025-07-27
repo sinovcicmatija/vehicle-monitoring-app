@@ -37,5 +37,13 @@ namespace vehicle_api.Controllers
             await _carService.StopStreamAsync();
             return Ok();
         }
+
+        [HttpGet("dtc")]
+        public async Task<IActionResult> GetDtc()
+        {
+            var dtc = await _carService.GetDtc();
+
+            return Ok(dtc);
+        }
     }
 }

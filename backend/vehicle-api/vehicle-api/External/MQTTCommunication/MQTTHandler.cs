@@ -37,10 +37,10 @@ namespace vehicle_api.External.MQTTCommunication
 
                 if (topic == "esp32/response/vin")
                 {
-                    if(_vinResponseTcs  != null)
-                    _vinResponseTcs.TrySetResult(payload);
+                    if (_vinResponseTcs != null)
+                        _vinResponseTcs.TrySetResult(payload);
                 }
-                else if(topic == "esp32/response/liveData")
+                else if (topic == "esp32/response/liveData")
                 {
                     try
                     {
@@ -59,12 +59,36 @@ namespace vehicle_api.External.MQTTCommunication
                         Console.WriteLine($"Greška pri deserializaciji live podataka: {ex.Message}");
                     }
                 }
-                await Task.CompletedTask;
+                else if (topic == "esp32/response/dtc")
+                {
+                    if (_dtcResponseTcs != null)
+                    {
+                        try
+                        {
+                            var dtc = JsonSerializer.Deserialize<List<string>>(payload);
+                            if (dtc != null)
+                            {
+                                _dtcResponseTcs.TrySetResult(dtc);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Deserializacija DTC liste nije uspjela.");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"Greška pri deserializaciji DTC: {ex.Message}");
+                        }
+                    }  
+                }
+                    await Task.CompletedTask;
             };
              
             await _mqttClient.ConnectAsync(mqttClientOptions);
             await _mqttClient.SubscribeAsync("esp32/response/vin");
             await _mqttClient.SubscribeAsync("esp32/response/liveData");
+            await _mqttClient.SubscribeAsync("esp32/response/dtc");
+
 
         }
 
@@ -81,6 +105,21 @@ namespace vehicle_api.External.MQTTCommunication
             await _mqttClient.PublishAsync(message);
             return await _vinResponseTcs.Task;  
         }
+
+        private TaskCompletionSource<List<string>>? _dtcResponseTcs;
+        public async Task<List<string>> RequestDtcAsync()
+        {
+            _dtcResponseTcs = new TaskCompletionSource<List<string>>();
+
+            var message = new MqttApplicationMessageBuilder()
+                .WithTopic("esp32/request/dtc")
+                .WithPayload("get_dtc")
+                .Build();
+
+            await _mqttClient.PublishAsync(message);
+            return await _dtcResponseTcs.Task;
+        }
+
         public async Task RequestLiveDataAsync()
         {
 
