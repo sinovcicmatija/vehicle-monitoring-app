@@ -47,7 +47,7 @@ namespace vehicle_api.External.MQTTCommunication
                         var liveData = JsonSerializer.Deserialize<CarDataLiveDTO>(payload);
                         if (liveData != null)
                         {
-                            await _hubContext.Clients.All.SendAsync("ReciveLiveData", liveData);
+                            await _hubContext.Clients.All.SendAsync("ReceiveLiveData", liveData);
                         }
                         else
                         {

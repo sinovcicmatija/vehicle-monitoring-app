@@ -18,6 +18,9 @@ CarDataLiveDTO getLiveData();
 String getElmValue(String pid);
 void getErrorCodes();
 String parseVinFromResponse(const String &rawResponse);
+std::vector<String> GetErrorCodes();
+void publishLiveData(const CarDataLiveDTO& data);
+void publishErrorCodes(const std::vector<String>& codes);
 bool streamActive = false;
 
 const char *ssid = "Mreza";
@@ -221,9 +224,9 @@ CarDataLiveDTO getLiveData()
 String getElmValue(String pid)
 {
   ELM_PORT.println(pid);
-  delay(30);
+  delay(20);
   String response;
-  unsigned long timeout = millis() + 400;
+  unsigned long timeout = millis() + 200;
 
   while (millis() < timeout)
   {

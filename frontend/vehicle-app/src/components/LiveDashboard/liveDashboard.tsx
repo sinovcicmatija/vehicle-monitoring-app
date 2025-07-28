@@ -17,7 +17,7 @@ const Dashboard = ({ }) => {
             .build();
 
         connection.on("ReceiveLiveData", data => {
-            console.log(data);
+            console.log("Primljeni podaci: ", data);
             setLiveData(data);
         });
 
@@ -93,7 +93,7 @@ const Dashboard = ({ }) => {
 
                 <div className="card-content">
                     <p className="text-yellow-600">TEMPERATURA USISA ZRAKA</p>
-                    <p className="text-5xl font-thin">{liveData?.intakeTemperature} V</p>
+                    <p className="text-5xl font-thin">{liveData?.intakeTemperature} °C</p>
                 </div>
             </div>
         </>

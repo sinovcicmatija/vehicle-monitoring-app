@@ -12,6 +12,16 @@ export const getCarData = async (): Promise<CarDataDTO> => {
     }
 }
 
+export const getDtc = async (): Promise<string[]> => {
+
+    try {
+        var response = await api.get('Vehicle/dtc');
+        return response.data;
+    } catch (error: any) {
+        throw new Error("Greška u komunikaciji s poslužiteljem");
+    }
+}
+
 export const startCarDataTransfer = async () => {
 
     try {

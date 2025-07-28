@@ -1,5 +1,6 @@
 #include "Elm327Parser.h"
 
+
 int Elm327Parser::parseRpm(const String& response) {
     int index = response.indexOf("41 0C");
     if (index != -1 && index + 9 < response.length()) {
@@ -49,6 +50,26 @@ int Elm327Parser::parseFuelLevel(const String& response) {
     return -1;
 }
 
+static String parseDtcCode(uint8_t A, uint8_t B) {
+    char systemLetter;
+
+    switch (A >> 6) {
+        case 0b00: systemLetter = 'P'; break;
+        case 0b01: systemLetter = 'C'; break;
+        case 0b10: systemLetter = 'B'; break;
+        case 0b11: systemLetter = 'U'; break;
+    }
+
+    int digit1 = (A >> 4) & 0x03;
+    int digit2 = A & 0x0F;
+    int digit3 = (B >> 4) & 0x0F;
+    int digit4 = B & 0x0F;
+
+    char code[6];
+    snprintf(code, sizeof(code), "%c%d%X%X%X", systemLetter, digit1, digit2, digit3, digit4);
+    return String(code);
+}
+
 std::vector<String> Elm327Parser::parseDtcCodes(const String& response) {
     std::vector<String> codes;
 
@@ -84,22 +105,3 @@ std::vector<String> Elm327Parser::parseDtcCodes(const String& response) {
     return codes;
 }
 
-static String parseDtcCode(uint8_t A, uint8_t B) {
-    char systemLetter;
-
-    switch (A >> 6) {
-        case 0b00: systemLetter = 'P'; break;
-        case 0b01: systemLetter = 'C'; break;
-        case 0b10: systemLetter = 'B'; break;
-        case 0b11: systemLetter = 'U'; break;
-    }
-
-    int digit1 = (A >> 4) & 0x03;
-    int digit2 = A & 0x0F;
-    int digit3 = (B >> 4) & 0x0F;
-    int digit4 = B & 0x0F;
-
-    char code[6];
-    snprintf(code, sizeof(code), "%c%d%X%X%X", systemLetter, digit1, digit2, digit3, digit4);
-    return String(code);
-}

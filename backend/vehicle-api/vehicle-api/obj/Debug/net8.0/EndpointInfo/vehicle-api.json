@@ -114,6 +114,18 @@
           }
         }
       }
+    },
+    "/api/Vehicle/dtc": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
