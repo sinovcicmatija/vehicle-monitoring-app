@@ -25,7 +25,7 @@ bool streamActive = false;
 
 const char *ssid = "Mreza";
 const char *password = "anecespogoditstoposto";
-const char *mqtt_server = "192.168.93.232";
+const char *mqtt_server = "192.168.54.232";
 const int mqtt_port = 1883;
 BluetoothSerial SerialBT;
 #define ELM_PORT SerialBT
