@@ -183,3 +183,5 @@ C:\zavrsni-rad\backend\vehicle-api\vehicle-api\bin\Debug\net8.0\Sprache.dll
 C:\zavrsni-rad\backend\vehicle-api\vehicle-api\bin\Debug\net8.0\MQTTnet.dll
 C:\zavrsni-rad\backend\vehicle-api\vehicle-api\bin\Debug\net8.0\MQTTnet.AspNetCore.dll
 C:\zavrsni-rad\backend\vehicle-api\vehicle-api\bin\Debug\net8.0\MQTTnet.Server.dll
+C:\zavrsni-rad\backend\vehicle-api\vehicle-api\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\zavrsni-rad\backend\vehicle-api\vehicle-api\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll

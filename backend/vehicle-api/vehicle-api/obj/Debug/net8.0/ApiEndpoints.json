@@ -50,5 +50,35 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "GetDtc",
+    "RelativePath": "api/Vehicle/dtc",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "StartLiveStream",
+    "RelativePath": "api/Vehicle/startLiveStream",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "StopLiveStream",
+    "RelativePath": "api/Vehicle/stopLiveStream",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

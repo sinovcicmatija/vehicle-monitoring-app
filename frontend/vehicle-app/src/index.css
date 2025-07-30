@@ -46,4 +46,7 @@
     .profile-icon {
         @apply ml-2 mr-4 text-gray-700
     }
+    .dtc-card {
+        @apply p-5 mb-2 border-b-4 border-lime-500 w-96 md:w-96 rounded-lg flex items-center font-light justify-between cursor-pointer hover:bg-gray-100 transition-colors
+    }
 }
