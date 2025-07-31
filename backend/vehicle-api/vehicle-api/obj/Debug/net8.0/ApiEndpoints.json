@@ -63,6 +63,38 @@
   },
   {
     "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "GetCarServiceHistory",
+    "RelativePath": "api/Vehicle/getCarServiceHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vin",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "SaveCarServiceEvent",
+    "RelativePath": "api/Vehicle/saveCarServiceEvent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carServiceEvent",
+        "Type": "vehicle_api.Models.DTO.SaveCarServiceEventDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
     "Method": "StartLiveStream",
     "RelativePath": "api/Vehicle/startLiveStream",
     "HttpMethod": "GET",

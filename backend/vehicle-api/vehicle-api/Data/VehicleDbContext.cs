@@ -20,7 +20,8 @@ public partial class VehicleDbContext : DbContext
 
     public virtual DbSet<OwnershipHistory> OwnershipHistories { get; set; }
 
-    public virtual DbSet<ServiceHistory> ServiceHistories { get; set; }
+    public virtual DbSet<ServiceEvent> ServiceEvents { get; set; }
+    public virtual DbSet<ServiceEventType> ServiceEventTypes { get; set; }
 
     public virtual DbSet<ServiceType> ServiceTypes { get; set; }
 
@@ -62,22 +63,35 @@ public partial class VehicleDbContext : DbContext
                 .HasConstraintName("FK_UserOwnershipHistory");
         });
 
-        modelBuilder.Entity<ServiceHistory>(entity =>
+        modelBuilder.Entity<ServiceEvent>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__ServiceH__3214EC074A2CA124");
 
-            entity.ToTable("ServiceHistory");
+            entity.ToTable("ServiceEvent");
 
-            entity.HasOne(d => d.Car).WithMany(p => p.ServiceHistories)
+            entity.HasOne(d => d.Car).WithMany(p => p.ServiceEvents)
                 .HasForeignKey(d => d.CarId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_CarServiceHistory");
-
-            entity.HasOne(d => d.ServiceType).WithMany(p => p.ServiceHistories)
-                .HasForeignKey(d => d.ServiceTypeId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_ServiceTypeServiceHistory");
+                .HasConstraintName("FK_CarServiceEvent");
         });
+
+        modelBuilder.Entity<ServiceEventType>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+
+            entity.ToTable("ServiceEventType");
+
+            entity.HasOne(e => e.ServiceEvent).WithMany(se => se.ServiceEventTypes)
+                .HasForeignKey(e => e.ServiceEventId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ServiceEvent");
+
+            entity.HasOne(e => e.ServiceType).WithMany(st => st.ServiceEventTypes)
+                .HasForeignKey(e => e.ServiceTypeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ServiceType");
+        });
+
 
         modelBuilder.Entity<ServiceType>(entity =>
         {

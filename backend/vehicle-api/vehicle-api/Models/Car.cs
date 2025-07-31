@@ -45,5 +45,5 @@ public partial class Car
 
     public virtual ICollection<OwnershipHistory> OwnershipHistories { get; set; } = new List<OwnershipHistory>();
 
-    public virtual ICollection<ServiceHistory> ServiceHistories { get; set; } = new List<ServiceHistory>();
+    public virtual ICollection<ServiceEvent> ServiceEvents { get; set; } = new List<ServiceEvent>();
 }

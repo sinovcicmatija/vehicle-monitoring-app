@@ -1,6 +1,6 @@
 const ServiceHistory = ({}) => {
     return (
-         <h1>Ovo je Service history</h1>
+         <h1 className="text-2xl p-10">Popis servisa</h1>
     )
 
 };

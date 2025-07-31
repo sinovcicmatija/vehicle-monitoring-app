@@ -45,5 +45,22 @@ namespace vehicle_api.Controllers
 
             return Ok(dtc);
         }
+
+        [HttpGet("getCarServiceHistory")]
+
+        public async Task<IActionResult> GetCarServiceHistory([FromQuery] string vin)
+        {
+            var serviceHistory = await _carService.GetCarServiceHistory(vin);
+            return Ok(serviceHistory);
+        }
+
+        [HttpPost("saveCarServiceEvent")]
+
+        public async Task<IActionResult> SaveCarServiceEvent([FromBody] SaveCarServiceEventDTO carServiceEvent)
+        {
+            await _carService.SaveCarServiceEventAsync(carServiceEvent);
+            return Ok();
+        }
     }
 }
+

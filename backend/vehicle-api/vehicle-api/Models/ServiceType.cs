@@ -13,5 +13,5 @@ public partial class ServiceType
 
     public int? TimeIntervalDays { get; set; }
 
-    public virtual ICollection<ServiceHistory> ServiceHistories { get; set; } = new List<ServiceHistory>();
+    public virtual ICollection<ServiceEventType> ServiceEventTypes { get; set; } = new List<ServiceEventType>();
 }
