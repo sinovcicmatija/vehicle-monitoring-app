@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Runtime.InteropServices;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using vehicle_api.Data;
@@ -142,6 +143,85 @@ namespace vehicle_api.Service
             }
             await _dbContext.SaveChangesAsync();
 
+        }
+
+        public async Task ConnectUserAndVehicle(string username, string vin)
+        {
+            int carId = await _dbContext.Cars
+                .Where(c => c.Vin == vin)
+                .Select(c => c.Id)
+                .FirstOrDefaultAsync();
+
+            int userId = await _dbContext.Users
+                .Where(u => u.Username == username)
+                .Select(u => u.Id)
+                .FirstOrDefaultAsync();
+
+            var newOwnershipHistoryInput = new OwnershipHistory
+            {
+                UserId = userId,
+                CarId = carId,
+                StartDate = DateOnly.FromDateTime(DateTime.Today)
+            };
+
+            _dbContext.OwnershipHistories.Add(newOwnershipHistoryInput);
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<List<FollowedCarsDTO>> GetFollowedCars(string username)
+        {
+            int userId = await _dbContext.Users
+                .Where(u => u.Username == username)
+                .Select(u => u.Id)
+                .FirstOrDefaultAsync();
+
+            var cars = await _dbContext.OwnershipHistories
+                .Where(o => o.UserId == userId && o.EndDate == null)
+                .Include(o => o.Car)
+                .Select(o => o.Car)
+                .ToListAsync();
+
+            if (cars.Count == 0)
+                return new List<FollowedCarsDTO>();
+
+            var followedCars = new List<FollowedCarsDTO>();
+
+            foreach (var car in cars)
+            {
+                followedCars.Add(new FollowedCarsDTO
+                {
+                    Vin = car.Vin,
+                    Brand = car.Brand,
+                    Model = car.Model,
+                    MakeYear = car.MakeYear
+                });
+            }
+
+            return followedCars;      
+        }
+
+        public async Task RemoveConnectionBetweenUserAndVehicle(string username, string vin)
+        {
+            int userId = await _dbContext.Users
+                .Where(u => u.Username == username)
+                .Select(u => u.Id)
+                .FirstOrDefaultAsync();
+
+            int carId = await _dbContext.Cars
+                .Where(c => c.Vin == vin)
+                .Select(c => c.Id)
+                .FirstOrDefaultAsync();
+
+            var ownerships = await _dbContext.OwnershipHistories
+                .Where(o => o.UserId == userId && o.CarId == carId && o.EndDate == null)
+                .ToListAsync();
+
+            foreach (var ownership in ownerships)
+            {
+                ownership.EndDate = DateOnly.FromDateTime(DateTime.Today);
+            }
+
+            await _dbContext.SaveChangesAsync();
         }
 
     }

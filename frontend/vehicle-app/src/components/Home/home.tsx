@@ -16,15 +16,24 @@ const Home = ({ loggedInUser }: { loggedInUser: LoggedInUserDTO }) => {
         }
     }, [data]);
 
+    useEffect(() => {
+        const savedCar = sessionStorage.getItem("connectedCar");
+        if (savedCar) {
+            setData(JSON.parse(savedCar));
+        }
+    }, []);
+
     const handleClick = async () => {
         setIsLoading(true);
         const data = await getCarData();
         setData(data);
+        sessionStorage.setItem("connectedCar", JSON.stringify(data));
         setIsLoading(false);
     };
 
     const handleDisconnect = () => {
         setData(null);
+        sessionStorage.removeItem("connectedCar");
     };
 
     return (
@@ -42,69 +51,69 @@ const Home = ({ loggedInUser }: { loggedInUser: LoggedInUserDTO }) => {
 
                 {data && (
                     <>
-                            
-                            <div className="flex-1">
-                                <button className="bg-primary hover:bg-blue-700 px-6 py-2 rounded-lg text-white shadow-lg mb-8 " onClick={handleDisconnect}>
-                                    Prekini vezu
-                                </button>
 
-                                <div className="grid gird-cols-1 md:grid-cols-2 gap-8 md:max-w-[1200px] ">
+                        <div className="flex-1">
+                            <button className="bg-primary hover:bg-blue-700 px-6 py-2 rounded-lg text-white shadow-lg mb-8 " onClick={handleDisconnect}>
+                                Prekini vezu
+                            </button>
 
-                                    {carImage && (
-                                <img
-                                    src={carImage}
-                                    alt={`${data.brand} ${data.model}`}
-                                    className="w-[300px] h-auto md:w-[400px] rounded-lg shadow-md mb-4"
-                                />
-                            )}
+                            <div className="grid gird-cols-1 md:grid-cols-2 gap-8 md:max-w-[1200px] ">
 
-                                    {/* OSNOVNE INFORMACIJE */}
-                                    <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
-                                        <h2 className="font-bold text-lg mb-2">Osnovne informacije</h2>
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <div>Marka i model: {data.brand} {data.model}</div>
-                                            <div>Godina proizvodnje: {data.makeYear}</div>
-                                            <div>Tip motora: {data.engineType}</div>
-                                            <div>Broj šasije: {data.vin}</div>
-                                            <div>Emisijski standard: {data.emissionStandard}</div>
-                                            <div>Maksimalna brzina: {data.maxSpeedKmh} km/h</div>
-                                        </div>
-                                    </section>
+                                {carImage && (
+                                    <img
+                                        src={carImage}
+                                        alt={`${data.brand} ${data.model}`}
+                                        className="w-[300px] h-auto md:w-[400px] rounded-lg shadow-md mb-4"
+                                    />
+                                )}
 
-                                    {/* DIMENZIJE I KAROSERIJA */}
-                                    <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
-                                        <h2 className="font-bold text-lg mb-2">Dimenzije i karoserija</h2>
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <div>Oblik karoserije: {data.body}</div>
-                                            <div>Dužina: {data.lengthMm} mm</div>
-                                            <div>Širina: {data.widthMm} mm</div>
-                                            <div>Visina: {data.heightMm} mm</div>
-                                        </div>
-                                    </section>
+                                {/* OSNOVNE INFORMACIJE */}
+                                <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
+                                    <h2 className="font-bold text-lg mb-2">Osnovne informacije</h2>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <div>Marka i model: {data.brand} {data.model}</div>
+                                        <div>Godina proizvodnje: {data.makeYear}</div>
+                                        <div>Tip motora: {data.engineType}</div>
+                                        <div>Broj šasije: {data.vin}</div>
+                                        <div>Emisijski standard: {data.emissionStandard}</div>
+                                        <div>Maksimalna brzina: {data.maxSpeedKmh} km/h</div>
+                                    </div>
+                                </section>
 
-                                    {/* TEŽINE */}
-                                    <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
-                                        <h2 className="font-bold text-lg mb-2">Masa i nosivost</h2>
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <div>Težina praznog vozila: {data.weightEmptyKg} kg</div>
-                                            <div>Maksimalna težina: {data.maxWeightKg} kg</div>
-                                            <div>Maks. teret na krovu: {data.maxRoofLoadKg} kg</div>
-                                        </div>
-                                    </section>
+                                {/* DIMENZIJE I KAROSERIJA */}
+                                <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
+                                    <h2 className="font-bold text-lg mb-2">Dimenzije i karoserija</h2>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <div>Oblik karoserije: {data.body}</div>
+                                        <div>Dužina: {data.lengthMm} mm</div>
+                                        <div>Širina: {data.widthMm} mm</div>
+                                        <div>Visina: {data.heightMm} mm</div>
+                                    </div>
+                                </section>
 
-                                    {/* KOČNICE I OVJES */}
-                                    <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
-                                        <h2 className="font-bold text-lg mb-2">Kočnice i ovjes</h2>
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <div>Prednje kočnice: {data.frontBrakes}</div>
-                                            <div>Stražnje kočnice: {data.rearBrakes}</div>
-                                            <div>Veličina kotača: {data.wheelSize}</div>
-                                            <div>ABS: {data.absState ? "Da" : "Ne"}</div>
-                                        </div>
-                                    </section>
+                                {/* TEŽINE */}
+                                <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
+                                    <h2 className="font-bold text-lg mb-2">Masa i nosivost</h2>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <div>Težina praznog vozila: {data.weightEmptyKg} kg</div>
+                                        <div>Maksimalna težina: {data.maxWeightKg} kg</div>
+                                        <div>Maks. teret na krovu: {data.maxRoofLoadKg} kg</div>
+                                    </div>
+                                </section>
 
-                                </div>
+                                {/* KOČNICE I OVJES */}
+                                <section className="shadow-lg border-l-4 p-10 rounded-lg bg-white">
+                                    <h2 className="font-bold text-lg mb-2">Kočnice i ovjes</h2>
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <div>Prednje kočnice: {data.frontBrakes}</div>
+                                        <div>Stražnje kočnice: {data.rearBrakes}</div>
+                                        <div>Veličina kotača: {data.wheelSize}</div>
+                                        <div>ABS: {data.absState ? "Da" : "Ne"}</div>
+                                    </div>
+                                </section>
+
                             </div>
+                        </div>
                     </>
                 )}
 

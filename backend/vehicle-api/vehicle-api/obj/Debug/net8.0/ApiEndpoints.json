@@ -43,6 +43,27 @@
   },
   {
     "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "ConnectUserAndVehicle",
+    "RelativePath": "api/Vehicle/connectUserAndVehicle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "vin",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
     "Method": "DecodeVin",
     "RelativePath": "api/Vehicle/decodevin",
     "HttpMethod": "GET",
@@ -69,6 +90,43 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "vin",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "GetFollowedCars",
+    "RelativePath": "api/Vehicle/getFollowedCars",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "RemoveConnectionBetweenUserAndVehicle",
+    "RelativePath": "api/Vehicle/removeConnectionBetweenUserAndVehicle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "vin",
         "Type": "System.String",

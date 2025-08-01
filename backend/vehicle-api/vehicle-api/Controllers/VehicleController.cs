@@ -61,6 +61,29 @@ namespace vehicle_api.Controllers
             await _carService.SaveCarServiceEventAsync(carServiceEvent);
             return Ok();
         }
+
+        [HttpGet("getFollowedCars")]
+        public async Task<IActionResult> GetFollowedCars([FromQuery] string username)
+        {
+            var carList = await _carService.GetFollowedCars(username);
+            return Ok(carList);
+        }
+
+        [HttpPost("connectUserAndVehicle")]
+
+        public async Task<IActionResult> ConnectUserAndVehicle([FromQuery] string username, string vin)
+        {
+            await _carService.ConnectUserAndVehicle(username, vin);
+            return Ok();
+        }
+        [HttpPost("removeConnectionBetweenUserAndVehicle")]
+
+        public async Task<IActionResult> RemoveConnectionBetweenUserAndVehicle([FromQuery] string username, string vin)
+        {
+            await _carService.RemoveConnectionBetweenUserAndVehicle(username, vin);
+            return Ok();
+        }
+
     }
 }
 
