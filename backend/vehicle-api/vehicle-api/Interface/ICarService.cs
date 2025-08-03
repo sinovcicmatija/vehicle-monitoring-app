@@ -15,6 +15,6 @@ namespace vehicle_api.Interface
         Task ConnectUserAndVehicle(string username, string vin);
         Task<List<FollowedCarsDTO>> GetFollowedCars(string username);
         Task RemoveConnectionBetweenUserAndVehicle(string username, string vin);
-
+        Task<List<string>> GetServiceTypes();
     }
 }

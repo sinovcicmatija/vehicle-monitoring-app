@@ -11,6 +11,7 @@ import type { LoggedInUserDTO } from './components/Util/loggedInUserDTO';
 import Registration from './components/Auth/registration';
 import NotificationModel from './components/Util/Notification/notificationModel';
 import Loader from './components/Util/Loader/loaderModel';
+import AddServiceEvent from './components/ServiceHistory/addServiceEvent';
 
 function App() {
   const [user, setUser] = useState<LoggedInUserDTO | null>(null);
@@ -51,6 +52,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/status" element={<CarStatus />} />
             <Route path="/history" element={<ServiceHistory />} />
+            <Route path='/service' element={<AddServiceEvent />} />
           </Routes>
         </div>
 

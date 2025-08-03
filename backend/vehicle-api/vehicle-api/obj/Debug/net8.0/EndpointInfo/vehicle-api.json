@@ -255,6 +255,18 @@
           }
         }
       }
+    },
+    "/api/Vehicle/getServiceTypes": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

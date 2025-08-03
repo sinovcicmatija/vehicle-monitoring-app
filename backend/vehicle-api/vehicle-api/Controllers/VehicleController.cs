@@ -84,6 +84,14 @@ namespace vehicle_api.Controllers
             return Ok();
         }
 
+        [HttpGet("getServiceTypes")]
+        public async Task<IActionResult> GetServiceTypes()
+        {
+            var serviceTypes = await _carService.GetServiceTypes();
+            return Ok(serviceTypes);
+        }
+
+
     }
 }
 

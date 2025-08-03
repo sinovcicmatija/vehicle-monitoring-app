@@ -116,6 +116,16 @@
   },
   {
     "ContainingType": "vehicle_api.Controllers.VehicleController",
+    "Method": "GetServiceTypes",
+    "RelativePath": "api/Vehicle/getServiceTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vehicle_api.Controllers.VehicleController",
     "Method": "RemoveConnectionBetweenUserAndVehicle",
     "RelativePath": "api/Vehicle/removeConnectionBetweenUserAndVehicle",
     "HttpMethod": "POST",

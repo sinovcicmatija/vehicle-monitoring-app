@@ -224,5 +224,12 @@ namespace vehicle_api.Service
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task<List<string>> GetServiceTypes()
+        {
+            return await _dbContext.ServiceTypes
+                .Select(st => st.ServiceName) 
+                .ToListAsync();
+        }
+
     }
 }

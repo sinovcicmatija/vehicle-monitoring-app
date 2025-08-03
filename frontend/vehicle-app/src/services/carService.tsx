@@ -94,3 +94,13 @@ export const RemoveConnectionBetweenUserAndVehicle = async(username: string, vin
         throw new Error("Greška u komunikaciji s poslužiteljem");
     }
 }
+
+export const GetServiceTypes = async (): Promise<string[]> => {
+
+    try {
+        var response = await api.get("Vehicle/getServiceTypes");
+        return response.data;
+    } catch (error: any) {
+        throw new Error("Greška u komunikaciji s poslužiteljem");
+    }
+}

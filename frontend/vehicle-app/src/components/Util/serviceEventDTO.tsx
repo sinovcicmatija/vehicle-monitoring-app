@@ -2,7 +2,7 @@ export interface ServiceEventDTO {
     vin: string,
     performedDate: string,
     mileageAtService: number,
-    notes: string,
+    notes?: string,
     performedServices: string[]
 
 }

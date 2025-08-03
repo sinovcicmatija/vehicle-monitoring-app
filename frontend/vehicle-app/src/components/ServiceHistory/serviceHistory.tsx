@@ -2,22 +2,34 @@ import { useEffect, useState } from "react";
 import { ConnectUserAndVehicle, GetCarServiceHistory, GetFollowedCars, RemoveConnectionBetweenUserAndVehicle } from "../../services/carService";
 import type { ServiceHistoryDTO } from "../Util/serviceHistoryDTO";
 import type { FollowedCarsDTO } from "../Util/followedCarsDTO";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const ServiceHistory = ({ }) => {
+    const location = useLocation();
+    const passedVin = location.state?.vin;
+
     const [serviceData, setServiceData] = useState<ServiceHistoryDTO[]>();
     const [followedCars, setFollowedCars] = useState<FollowedCarsDTO[]>([]);
     const [selectedCarVin, setSelectedCarVin] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(true);
     const [isLoadingButton1, setIsLoadingButton1] = useState(false);
     const [isFollowing, setIsFollowing] = useState(false);
-    const [isLoadingButton2, setIsLoadingButton2] = useState(false);
     const connectedUser = sessionStorage.getItem("user");
     const user = connectedUser ? JSON.parse(connectedUser) : null;
     const username = user?.username;
     const connectedCar = sessionStorage.getItem("connectedCar");
+    const navigate = useNavigate();
 
     const loadData = async () => {
         setIsLoading(true);
+
+        if (passedVin) {
+            setSelectedCarVin(passedVin);
+            const history = await GetCarServiceHistory(passedVin);
+            setServiceData(history);
+            setIsLoading(false);
+            return;
+        }
 
         if (connectedCar) {
             const car = JSON.parse(connectedCar);
@@ -90,8 +102,8 @@ const ServiceHistory = ({ }) => {
     };
 
 
-    const handleAddNewServiceEvent = async () => {
-        setIsLoadingButton2(true);
+    function handleAddNewServiceEvent(): void {
+        navigate("/service", { state: { vin: selectedCarVin } });
     }
 
     return (
@@ -160,7 +172,7 @@ const ServiceHistory = ({ }) => {
 
                     <button className="bg-primary hover:bg-blue-700 px-6 py-2 rounded-lg text-white shadow-lg"
                         onClick={handleAddNewServiceEvent}>
-                        {isLoadingButton2 ? "Učitavanje..." : "Dodaj novi servis"}
+                        Dodaj novi servis
                     </button>
                 </div>
             )}
