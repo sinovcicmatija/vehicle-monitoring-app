@@ -40,9 +40,12 @@ builder.Services.AddHttpClient<VinDecoderApiService>(client =>
 builder.Services.AddSignalR();
 
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<MailSetup>();
+builder.Services.AddScoped<MailService>();
 builder.Services.AddScoped<ICarService, CarService>();
 builder.Services.AddSingleton<MQTTHandler>();
 builder.Services.AddHostedService<MQTTStartupService>();
+builder.Services.AddHostedService<MailReminderService>();
 
 builder.Services.AddDbContext<VehicleDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

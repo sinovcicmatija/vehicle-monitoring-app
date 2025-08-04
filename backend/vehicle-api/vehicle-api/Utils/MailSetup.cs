@@ -19,7 +19,7 @@ namespace vehicle_api.Utils
 
             using var client = new SmtpClient();
             await client.ConnectAsync("smtp.gmail.com", 587, false);
-            await client.AuthenticateAsync("tvojEmail@gmail.com", "tvojaAppLozinka"); 
+            await client.AuthenticateAsync("sinovcicmatija@gmail.com", "rqdzusgidufhgurn"); 
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
         }
