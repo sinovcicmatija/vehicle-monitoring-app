@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("vehicle-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+13e28cf5f03367a5d42fcbaa4f8d0f65ebd72aee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+224ded8bdb72f2431153984b9351639551c64fdb")]
 [assembly: System.Reflection.AssemblyProductAttribute("vehicle-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("vehicle-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

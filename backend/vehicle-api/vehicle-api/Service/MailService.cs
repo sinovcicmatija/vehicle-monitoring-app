@@ -32,7 +32,9 @@ namespace vehicle_api.Service
 
             foreach (var (carId, userIds) in groupedByCar)
             {
-                // 2. Dohvati sve service evente za taj auto
+                var car = await _dbContext.Cars.FindAsync(carId);
+                var carInfo = $"{car.Brand} {car.Model} ({car.MakeYear}) - {car.Vin}";
+
                 var serviceEvents = await _dbContext.ServiceEvents
                     .Where(se => se.CarId == carId)
                     .Include(se => se.ServiceEventTypes)
@@ -49,13 +51,14 @@ namespace vehicle_api.Service
                         if (ev.PerformedDate == null)
                             continue;
 
-                        var daysSince = now.DayNumber - ev.PerformedDate.Value.DayNumber;
+                        var totalDays = now.DayNumber - ev.PerformedDate.Value.DayNumber;
+                        var overdueDays = totalDays - interval.Value;
 
-                        if (daysSince > interval)
+                        if (overdueDays > 0)
                         {
                             foreach (var userId in userIds.Distinct())
                             {
-                                carsToNotify.Add((userId, carId, $"Prekoračeno {daysSince:F0} dana za servis: {set.ServiceType.ServiceName}"));
+                                carsToNotify.Add((userId, carId, $"Vozilo: {carInfo}\nPrekoračeno {overdueDays:F0} dana za servis: {set.ServiceType.ServiceName}"));
                             }
                         }
                     }
